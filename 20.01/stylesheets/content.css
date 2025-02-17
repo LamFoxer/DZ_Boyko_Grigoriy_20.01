@@ -1,16 +1,40 @@
-*{ box-sizing: border-box;}
-html, body{ height: 100%;
-background: bisque;}
-
-@font-face {
-font-family: "CarlaSansLight";
-src: url("../fonts/CarlaSansLight.ttf") format("truetype");
-font-style: Light;
-font-weight: Light;
+.backgroundImg{
+    position: absolute;
+    width: 100vw;
+    height: 100vw; 
+    z-index: -1;
 }
 
-p{ font-family: 'CarlaSansLight'; }
+p{
+    position: relative;
+    color: white;
+    font-size: 30px;
+    text-align: center;
+    margin-top: 8%;
+}
 
-#integriruemtext{
-    margin: 10% 40%;
+.buttonSTEKLO{
+    position: absolute;
+    width: 20vw;
+    height: 5vw;
+    margin-left: 40%;
+    margin-top: 30%;
+    background: rgba(233, 201, 201, 0.2);
+    border-radius: 20px;
+    backdrop-filter: blur(60px);
+    border: none;
+    font-size: 30px;
+}
+
+.buttonNEO{
+    position: absolute;
+    width: 20vw;
+    height: 5vw;
+    margin-left: 40%;
+    margin-top: 40%;
+    box-shadow: inset 0px 0px 20px rgba(0,0,0,0.5);
+    background-color: lightsalmon;
+    border-radius: 20px;
+    border: none;
+    font-size: 30px;
 }

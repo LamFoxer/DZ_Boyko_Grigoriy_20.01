@@ -4,43 +4,31 @@ document.addEventListener("DOMContentLoaded", function(){
 |||||||||||||||||||||||||||||||||||||||||||
 ||||   ДОМАШНЯЯ РАБОТА 1 (ЗА 20.01)   |||||
 |||||||||||||||||||||||||||||||||||||||||||
+    */
 
-    //всё выводится в консоль, чтобы не плодить уведы!
+    alert("Сначала вы увидете ДЗ1 за 20.01.");
 
     //1
     let str = 'abcde';
-    console.log(str[0]);
-    console.log(str[1]);
-    console.log(str[4]);
+    alert("я обращаюсь сначала к " + str[0] + " потом к " + str[1] + " и наконец к " + str[4]);
 
     //2
-    let num1 = prompt("Enter first number.", "");
-    let num2 = prompt("Enter second number.", "");
-    let result;
+    let num1 = parseInt(prompt("Enter first number.", ""));
+    let num2 = parseInt(prompt("Enter second number.", ""));
 
-    if (num1 > 0) {
-        result = true;
-    }
-    else if (num2 > 0) {
-        result = true;
-    }
-    else {
-        result = false;
-    }
-    console.log(result);
+    alert(num1 > 0 || num2 > 0);
 
     //3
     let userAge = parseInt(prompt("Enter your age (e.g. 18, 37).", ""));
     if (userAge >= 18) {
-        console.log("Совершеннолетний");
+        alert("Совершеннолетний");
     }
     else if (userAge < 18) {
-        console.log("Несовершеннолетний");
+        alert("Несовершеннолетний");
     }
     else {
-        console.log("error");
+        alert("error");
     }
-    */
 
     /* 
     |||||||||||||||||||||||||||||||||||||||||||
@@ -48,6 +36,8 @@ document.addEventListener("DOMContentLoaded", function(){
     |||||||||||||||||||||||||||||||||||||||||||
     */
     //задача 1
+
+    alert("Теперь вашему вниманию ДЗ2 за 27.01");
 
     let numberOne = parseInt(prompt("Введите число арабскими цифрами:", ""));
 
@@ -97,5 +87,36 @@ document.addEventListener("DOMContentLoaded", function(){
         alert("Не получилось.");
     }
     //конец задачи 3
+
+    /* 
+    |||||||||||||||||||||||||||||||||||||||||||
+    ||||   ДОМАШНЯЯ РАБОТА 3 (ЗА 03.02.)   ||||
+    |||||||||||||||||||||||||||||||||||||||||||
+    */
+
+    //Если честно, больше всего на сайте Д.Рамса мне понравилось изменения цвета-
+    //-текста при наведении. Так просто и лаконично, но как красиво и элегантно.
+    //К тому же функционально: пользователь понимает, что можно кликнуть.
+
+    //!ВНИМАНИЕ! СТЕКЛОМОРФ ПОЧЕМУ-ТО НЕ РАБОТАЕТ В SAFARI.
+
+    alert("ДЗ3 за 03.02. Стекломорф работает только в гугл хроме.");
+
+    let button = document.querySelectorAll(".clickbox");
+
+    button.forEach(function(clickbox){ 
+        clickbox.addEventListener("click", function(){
+            if(clickbox.style.backgroundColor === "lightsalmon"){
+                
+                clickbox.style.backgroundColor = "red";
+                clickbox.style.margin = '70%';
+            }
+            else{
+                clickbox.style.backgroundColor = "lightsalmon";
+                clickbox.style.margin = '50%';
+            }
+        });
+    });
+
 
 })
